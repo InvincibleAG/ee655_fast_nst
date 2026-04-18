@@ -41,12 +41,6 @@ npm start
 http://localhost:3000
 ```
 
-### Option 3: Docker
-
-```bash
-docker-compose up
-```
-
 Then open http://localhost:3000
 
 ## 📋 System Requirements
