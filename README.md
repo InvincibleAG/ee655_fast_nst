@@ -204,12 +204,6 @@ npm test
 
 ## 📦 Production Deployment
 
-### Backend (Gunicorn)
-```bash
-pip install gunicorn
-gunicorn -w 4 -b 0.0.0.0:5000 app:app
-```
-
 ### Frontend (Build)
 ```bash
 cd frontend
