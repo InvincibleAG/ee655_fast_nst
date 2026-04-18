@@ -167,13 +167,6 @@ To use CUDA (requires NVIDIA GPU):
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
 
-## 🐳 Docker Deployment
-
-### Build and Run
-```bash
-docker-compose up --build
-```
-
 ### Services
 - **Backend**: http://localhost:5000
 - **Frontend**: http://localhost:3000
