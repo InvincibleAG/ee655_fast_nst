@@ -13,24 +13,8 @@ A modern, full-stack web application for neural style transfer. Upload content a
 - **Performance Metrics** - View processing time and loss values
 - **Download Results** - Save your stylized images as PNG
 - **Modern UI** - Beautiful, responsive React interface
-- **Docker Support** - Easy deployment with Docker/Docker Compose
 
-## 🚀 Quick Start
-
-### Option 1: Automated Setup (Recommended)
-
-**Windows:**
-```bash
-quickstart.bat
-```
-
-**macOS/Linux:**
-```bash
-chmod +x quickstart.sh
-./quickstart.sh
-```
-
-### Option 2: Manual Setup
+### Manual Setup
 
 **1. Backend Setup:**
 ```bash
@@ -75,11 +59,6 @@ Then open http://localhost:3000
 | Storage | 2GB | 5GB+ |
 | GPU | Optional | CUDA 11.8+ |
 
-## 📚 Documentation
-
-- **[SETUP_GUIDE.md](SETUP_GUIDE.md)** - Detailed installation and configuration
-- **[API_REFERENCE.md](API_REFERENCE.md)** - Complete API documentation
-
 ## 🎯 How to Use
 
 1. **Upload Content Image** - Your base photo
@@ -112,17 +91,10 @@ Then open http://localhost:3000
 Neural-Style-Transfer/
 ├── app.py                              # Flask backend server
 ├── requirements-backend.txt            # Python dependencies
-├── SETUP_GUIDE.md                      # Setup instructions
-├── API_REFERENCE.md                    # API documentation
-├── Dockerfile.backend                  # Backend container
-├── docker-compose.yml                  # Docker orchestration
-├── quickstart.sh                       # Unix quick start
-├── quickstart.bat                      # Windows quick start
 │
 ├── frontend/
 │   ├── package.json                   # Node dependencies
 │   ├── .env                           # Environment config
-│   ├── Dockerfile                     # Frontend container
 │   │
 │   ├── public/
 │   │   └── index.html                # HTML entry point
@@ -148,26 +120,6 @@ Neural-Style-Transfer/
 | Processing Time | ~10-30s | ~30-60s | ~60-300s |
 | Quality | Good | Excellent | Outstanding |
 | Best For | Previews | General Use | Final Output |
-
-## 🔌 API Endpoints
-
-### Health Check
-```http
-GET /health
-```
-
-### Style Transfer
-```http
-POST /api/stylize
-Content-Type: multipart/form-data
-
-Parameters:
-- content: File (image/jpg or image/png)
-- style: File (image/jpg or image/png)
-- num_steps: Number (default: 100)
-- size: Number (128, 256, or 512; default: 256)
-- mode: String ('fast', 'balanced', or 'quality'; default: 'balanced')
-```
 
 ## 💡 Tips for Best Results
 
@@ -237,19 +189,6 @@ Set in `docker-compose.yml` if needed:
 - `FLASK_ENV` - Set to 'production' for deployment
 - `REACT_APP_API_URL` - API endpoint (usually `http://backend:5000`)
 
-## 📊 Performance Benchmarks
-
-*Approximate times on CPU (Core i7, 8GB RAM):*
-
-| Resolution | Steps | Mode | Time |
-|------------|-------|------|------|
-| 128x128 | 50 | Fast | 5-10s |
-| 256x256 | 100 | Balanced | 30-45s |
-| 256x256 | 200 | Quality | 60-90s |
-| 512x512 | 100 | Balanced | 120-180s |
-
-*GPU speeds can be 5-10x faster*
-
 ## 🎓 Learning Resources
 
 - [PyTorch Documentation](https://pytorch.org/docs/)
@@ -305,26 +244,6 @@ Contributions are welcome! Areas for improvement:
 - [ ] Add more style transfer algorithms
 - [ ] Improve error handling
 
-## 📞 Support
-
-### Getting Help
-1. Check [SETUP_GUIDE.md](SETUP_GUIDE.md)
-2. Review [API_REFERENCE.md](API_REFERENCE.md)
-3. Check troubleshooting section above
-4. Examine console logs and terminal output
-
-### Common Issues
-
-**"ModuleNotFoundError: No module named..."**
-- Run: `pip install -r requirements-backend.txt`
-
-**"npm: command not found"**
-- Install Node.js from https://nodejs.org/
-
-**Port already in use**
-- Backend: Change port in `app.py` `app.run(port=5001)`
-- Frontend: Set `PORT=3001 npm start`
-
 ## 🎉 Examples
 
 ### Artistic Styles
@@ -350,11 +269,3 @@ Possible enhancements:
 - [ ] Cloud deployment
 
 ---
-
-<div align="center">
-
-**Made with ❤️ for style transfer enthusiasts**
-
-[⬆ Back to Top](#-neural-style-transfer---full-stack-application)
-
-</div>
